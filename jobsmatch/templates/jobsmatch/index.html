@@ -1,0 +1,404 @@
+{% extends "base.html" %} 
+{% load staticfiles %}
+{% block content %}
+<!-- start: Slider -->
+               <div id="slider">
+                  <div class="flex-container">
+                     <div class="flexslider">
+                        <ul class="slides">
+                           <li>
+                              <img src="{% static 'images/1.jpg' %}" alt=""/>
+                              <div class="caption-wrap hidden-xs">
+                                 <div class="caption-content animated fadeInRight">
+                                    <h2 class="tagline">
+                                       <b>Professional Approach.</b>
+                                       <br>in our
+                                       <span>recruiutment</span>.
+                                    </h2>
+                                    <p class="subline">We work with the best in
+                                       <br>the best in &nbsp; the industry
+                                    </p>
+                                    <div class="buttonWarp">
+                                       <a href="/jobsmatch/register" class="btn btn-blue btn-lg">Try it Free now</a>
+                                    </div>
+                                    <div class="asSeenOn">
+                                       <h6>As seen on:</h6>
+                                       <p class="logos">Firm one, firm two,firm three</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <img src="{% static 'images/2.jpg' %}" alt=""/>
+                              <div class="caption-wrap hidden-xs  animated fadeIn">
+                                 <div class="caption-content animated fadeInRight">
+                                    <h2 class="tagline">
+                                       <b>We link you</b>
+                                       <br>to the
+                                       <span>Right Career</span>.
+                                    </h2>
+                                    <p class="subline">Our job match service has your
+                                       <br>resume and &nbsp;skills in mind.
+                                    </p>
+                                    <div class="buttonWarp">
+                                       <a href="/jobsmatch/register" class="btn btn-blue btn-lg">Try it Free now</a>
+                                    </div>
+                                    <div class="asSeenOn">
+                                       <h6>As seen on:</h6>
+                                       <p class="logos">Coke Kenya, Sarafi networks</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+<!-- end: Slider -->
+               <!-- start: Sign up form -->
+               <section class="sign-up">
+                  <div class="container sign-up-inner">
+                     <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                           <h4>What are you waiting for? This service is totally free!</h4>
+                            
+                           <form action='verify/' method="post" class="form-inline" role="form">
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                 <!--<input type="text" name='username' class="form-control" id="exampleInputEmail2" placeholder="Enter username"> -->
+                                  {{ form.username }}
+                                  {% csrf_token %}
+                               </div>
+                              <div class="form-group">
+                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                 <!--<input type="password" name="password"d class="form-control" id="exampleInputPassword2" placeholder="Password"> -->
+                                 {{ form.password }}
+                               </div>
+                              <button type="submit" class="btn btn-blue btn-lg">Sign In</button>
+                           </form>
+                            
+                           <p>If dont have an account create one and start enjoying or services</p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- end: Siign up form -->
+<!-- start: Service -->
+               <section id="service" class="space">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-4">
+                           <div class="service-box">
+                              <div class="icon">
+                                 <img src="{% static 'jobsmatch/images/icon_1.png' %}" alt="">
+                              </div>
+                              <h3>Built for technical</h3>
+                              <p>However technical the recruitment might be. We handle the right mix of gurus.</p>
+                           </div>
+                           <!-- end: Box -->
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="service-box">
+                              <div class="icon">
+                                 <img src="{% static 'jobsmatch/images/icon_2.png' %}" alt="">
+                              </div>
+                              <h3>For Startups</h3>
+                              <p>We also service SME's in our recruitment business. Anyone can be a part of it.</p>
+                           </div>
+                           <!-- end: Box -->
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="service-box">
+                              <div class="icon">
+                                 <img src="{% static 'jobsmatch/images/icon_3.png' %}" alt="">
+                              </div>
+                              <h3>Web approach</h3>
+                              <p>Both for the job seeker and the employee. Our services is accessible online.</p>
+                           </div>
+                           <!-- end: Box -->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- end: services -->
+               <div class="clearfix"></div>
+               <!-- start: Features -->
+               <section id="features" class="space dark-bg">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-5">
+                           <div class="ftr-left">
+                              <h3>Flexible Plan</h3>
+                              <p>Our recruitment plan is flexible to suite your every need</p>
+                           </div>
+                           <div class="ftr-left">
+                              <h3>Service of Value</h3>
+                              <p>We only ensure there is value for money</p>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1">
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <div class="flip-container">
+                                    <div class="flipper">
+                                       <div class="front">
+                                          <img src="{% static 'jobsmatch/icons/buy4.svg' %}" alt="">
+                                       </div>
+                                       <div class="back">
+                                          <div class="back-content">
+                                             <h4>Economical</h4>
+                                             <p>We save you lots of cash</p>
+                                          </div>
+                                       </div>
+                                       <!-- .back -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="flip-container">
+                                    <div class="flipper">
+                                       <div class="front">
+                                          <img src="{% static 'jobsmatch/icons/data29.svg' %}" alt="">
+                                       </div>
+                                       <div class="back">
+                                          <div class="back-content">
+                                             <h4>Cloud services</h4>
+                                             <p>Our cloud based services are secure and saves you security nightmare</p>
+                                          </div>
+                                       </div>
+                                       <!-- .back -->
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <div class="flip-container">
+                                    <div class="flipper">
+                                       <div class="front">
+                                          <img src="{% static 'jobsmatch/icons/pc5.svg' %}" alt="">
+                                       </div>
+                                       <div class="back">
+                                          <div class="back-content">
+                                             <h4>Web Links</h4>
+                                             <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis velit tempor.</p>
+                                          </div>
+                                       </div>
+                                       <!-- .back -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="flip-container">
+                                    <div class="flipper">
+                                       <div class="front">
+                                          <img src="{% static 'jobsmatch/icons/dollar77.svg' %}" alt="">
+                                       </div>
+                                       <div class="back">
+                                          <div class="back-content">
+                                             <h4>Web Links</h4>
+                                             <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis velit tempor.</p>
+                                          </div>
+                                       </div>
+                                       <!-- .back -->
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- end: Features -->
+               <section id="featured" class="space grey-bg-50">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-6">
+                           <h3 class="heading">
+                              <em>Are you looking to hire?</em> Then look no further.
+                           </h3>
+                           <p>Our package will enable you the get the right person at the right cost </p>
+                           <div class="bottomCont">
+                              <div class="row">
+                                 <div class="col-sm-3">
+                                    <img class="icon" src="{% static 'jobsmatch/icons/magnifying35.svg' %}" alt="">
+                                 </div>
+                                 <div class="col-sm-9">
+                                    <h4>Check our statistics</h4>
+                                    <p>We are currently rated the best in Africa as one of the most reliable online job recruitment agencies</p>
+                                 </div>
+                              </div>
+                              <!-- .row -->
+                           </div>
+                           <!-- .bottomCont -->
+                        </div>
+                        <!-- .col 6 -->
+                        <div class="col-sm-3 pricing">
+                           <h3>Basic service.</h3>
+                           <p class="punch">Covers only shortlisting of candidates</p>
+                           <ul class="list-unstyled bullets">
+                              <li>20 applicants</li>
+                              <li>Partial interview</li>
+                           </ul>
+                           <ul class="list-inline list-unstyled price-btns">
+                              <li>
+                                 <a class="btn btn-blue" href="#">1 month</a>
+                              </li>
+                              <li class="active">
+                                 <a class="btn btn-border" href="#">1 year</a>
+                              </li>
+                           </ul>
+                           <div class="price">
+                              <p>
+                                 <span class="alpha">
+                                 <sup>$</sup>39.99</span>
+                                 <span class="gamma">
+                                 <sup>$</sup>
+                                 <del>69.99</del>
+                                 </span>
+                              </p>
+                              <p class="price-note">Moderate and efficient</p>
+                           </div>
+                        </div>
+                        <!-- .col 3 -->
+                        <div class="col-sm-3 pricing">
+                           <h3>Premium service</h3>
+                           <p class="punch">Thorough and detailed applicant scruitinty</p>
+                           <ul class="list-unstyled bullets">
+                              <li>Complete interview</li>
+                              <li>Full technical test</li>
+                           </ul>
+                           <ul class="list-inline list-unstyled price-btns">
+                              <li>
+                                 <a class="btn btn-blue" href="#">1 month</a>
+                              </li>
+                              <li class="active">
+                                 <a class="btn btn-border" href="#">1 year</a>
+                              </li>
+                           </ul>
+                           <div class="price" id="price-1-year">
+                              <p>
+                                 <span class="alpha">
+                                 <sup>$</sup>49.99</span>
+                                 <span class="gamma">
+                                 <sup>$</sup>
+                                 <del>89.99</del>
+                                 </span>
+                              </p>
+                              <p class="price-note">Best value for your money</p>
+                           </div>
+                        </div>
+                        <!-- .col 3 -->
+                     </div>
+                  </div>
+               </section>
+               <!-- start: Customers -->
+               <section id="clients" class="space">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                           <h1>You're in good company</h1>
+                           <p class="lead">See some of the companies that enjoy our services</p>
+                        </div>
+                     </div>
+                     <div class="row hidden-sm logos">
+                        <ul class="list-unstyled list-inline">
+                           <li class="col-sm-2 col-sm-offset-2">
+                              <a href="#">
+                              <img src="{% static 'jobsmatch/images/logo2.png' %}" alt="" class="img-responsive">
+                              </a>
+                           </li>
+                           <li class="col-sm-2">
+                              <a href="#">
+                              <img src="{% static 'jobsmatch/images/logo3.png' %}" alt="" class="img-responsive">
+                              </a>
+                           </li>
+                           <li class="col-sm-2">
+                              <a href="#">
+                              <img src="{% static 'jobsmatch/images/logo4.png' %}" alt="" class="img-responsive">
+                              </a>
+                           </li>
+                           <li class="col-sm-2">
+                              <a href="#">
+                              <img src="{% static 'jobsmatch/images/logo5.png' %}" alt="" class="img-responsive">
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="row quote-section">
+                        <div class="col-sm-4">
+                           <blockquote class="quote-text">
+                              <a href="#">@They hooked me up with some of the best employees in the industry.</a>
+                           </blockquote>
+                           <p class="quote-author">
+                              <a href="#">
+                              <strong>John Mwanzia</strong>@#johdoe</a>
+                           </p>
+                        </div>
+                        <div class="col-sm-4">
+                           <blockquote class="quote-text">
+                              <a href="#">@They are the best in Nairobi and East Africa</a>
+                           </blockquote>
+                           <p class="quote-author">
+                              <a href="#">
+                              <strong>Sammy Njoroge</strong>@#johdoe</a>
+                           </p>
+                        </div>
+                        <div class="col-sm-4">
+                           <blockquote class="quote-text">
+                              <a href="#">@If you take time to know them you will really be thrilled by their service.</a>
+                           </blockquote>
+                           <p class="quote-author">
+                              <a href="#">
+                              <strong>John Cherop</strong>@#johdoe</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- end: Customers  section -->
+               <section id="cta-big" class="space">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12 text-center">
+                           <h2>500 people recruited, 90 million hours saved</h2>
+                           <p>
+                              <a href="#" class="btn btn-blue btn-lg">Call us and get a quote</a>
+                           </p>
+                        </div>
+                     </div>
+                     <!-- .row -->
+                     <div class="row">
+                        <div class="col-sm-12 hidden-xs">
+                           <h3 class="cta-h3">Want to know more?
+                           </h3>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                           <div class="contact_box">
+                              <p>Give us a call
+                                 <br>1-888-123-4567
+                              </p>
+                           </div>
+                        </div>
+                        <!-- .col-4 -->
+                        <div class="col-sm-4 text-center">
+                           <div class="contact_box">
+                              <p>Send us an
+                                 <br>enquiry online
+                              </p>
+                           </div>
+                        </div>
+                        <!-- .col-4 -->
+                        <div class="col-sm-4 text-center">
+                           <div class="contact_box">
+                              <p>Book a 20min webinar
+                                 <br>introduction to Softr
+                              </p>
+                           </div>
+                        </div>
+                        <!-- .col-4 -->
+                     </div>
+                     <!-- .row -->
+                  </div>
+               </section>
+{% endblock %}

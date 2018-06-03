@@ -1,0 +1,41 @@
+{% extends "adminbase.html" %} 
+{% load staticfiles %}
+{% block content %}
+<section id="" class="space">
+    <div class="container">
+        <hr />
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-sm-8" style="border: 1px solid #efefef; padding: 30px;">
+                <h3>Resume</h3>
+                {% for p in profile %}
+
+                            <label>Names</label><br />
+                            {{ p.fname }} {{p.lname}}<br /><br />
+                            <label>Email</label><br />
+                            {{ p.email }}<br /><br />
+                            <label>Profile Summary</label><br />
+                            {{ p.summary }}<br /><br />
+
+                            <label>Skills</label><br />
+                            {{ p.skills }}<br /><br />
+
+                            <label>Certifications</label><br />
+                            {{ p.certifications }}<br /><br />
+                        {% endfor %}
+                        <hr noshade />
+
+                        {% for c in career %}
+                            <label>Company</label><br />
+                            {{ c.company }}<br /><br />
+
+                            <label>Job description</label><br />
+                            {{ c.description }}<br /><br />
+
+                            <label>Start Year</label><br />
+                            {{ c.start_date }}<br /><br />
+                        {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+   <![endif]-->
+   <!--[if IE 7]>         
+   <html class="no-js lt-ie9 lt-ie8">
+      <![endif]-->
+      <!--[if IE 8]>         
+      <html class="no-js lt-ie9">
+         <![endif]-->
+         <html lang="en">
+            <head>
+               <meta charset="utf-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+               <meta name="description" content="">
+               <meta name="author" content="">
+               <link rel="shortcut icon" href="favicon.ico">
+               <title>Jobs Match</title>
+               <!-- Bootstrap core CSS -->
+               <link href="{% static 'jobsmatch/css/bootstrap.min.css' %}" rel="stylesheet">
+               <!-- Bootstrap core CSS -->
+               <link href="{% static 'jobsmatch/css/animate.css' %}" rel="stylesheet">
+               <link href="{% static 'jobsmatch/css/flexslider.css' %}" rel="stylesheet">
+               <link href="{% static 'jobsmatch/css/font-awesome.min.css' %}" rel="stylesheet">
+               <link href="{% static 'jobsmatch/css/owl.carousel.css' %}" rel="stylesheet">
+               <link href="{% static 'jobsmatch/css/owl.theme.css' %}" rel="stylesheet">
+               <link href="{% static 'jobsmatch/css/venobox.css' %}" rel="stylesheet">
+               <!-- Custom styles for this template -->
+                <link href="{% static 'jobsmatch/css/style.css' %}" rel="stylesheet">
+               <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+               <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+               <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+               <!--[if lt IE 9]>
+               <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+               <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+               <![endif]-->
+            </head>
+            <body>
+               <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container-full">
+                     <div class="row">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                           <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           </button>
+                           <a class="navbar-brand" href="/jobsmatch/">
+                           <img src="{% static 'jobsmatch/images/logo.svg' %}" alt="">
+                           <span>ela</span>
+                           </a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                           <ul class="nav navbar-nav" id="top-nav">
+                              <li><a href="/jobsmatch/admin">Dashboard</a>
+                              <li><a href="/jobsmatch/add_job">Post Job</a></li>
+                              <li><a href="/jobsmatch/criteria">Filter Criteria</a></li>
+                               <li><a href="/jobsmatch/filter_job">Filter Profiles</a></li>
+                           </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                     </div>
+                     <!-- .row -->
+                  </div>
+               </div>              
+               
+               {% block content %}
+               {% endblock %}
+
+               <script src="{% static 'jobsmatch/js/jquery.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/bootstrap.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/jquery.flexslider.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/owl.carousel.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/pace.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/smoothscroll.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/isotope.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/venobox.min.js' %}"></script>
+               <script src="{% static 'jobsmatch/js/softr.js' %}"></script>
+            </body>
+         
+</html>

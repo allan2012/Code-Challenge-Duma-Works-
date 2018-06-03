@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% load staticfiles %}
+{% block content %}
+
+<section id="" class="space">
+    <div class="container">
+        <a href="{%  url 'log_out' %}?next=/jobsearch">Log out</a>
+        <hr />
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-sm-4">
+                Welcome {{ current_user }}
+            </div>
+            
+            <div class="col-sm-8">
+                <p>Hi {{ current_user}} it seems you haven't created a profile. Please create one for job matching:</p>
+                <form action='' method="post">
+                {{form}}
+                    {% csrf_token %}<br /><br />
+                <input type="submit" value="Save Profile" class="btn btn-success btn-md" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

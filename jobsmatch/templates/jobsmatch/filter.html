@@ -1,0 +1,46 @@
+{% extends "adminbase.html" %} 
+{% load staticfiles %}
+{% block content %}
+<section id="" class="space">
+    <div class="container">
+        <h4>Filter Applicants</h4>
+        <hr />
+        <div class="row" style="padding-top: 30px;">
+            <form action='' method='post'>
+                <label>Select filter criteria</label><br />
+            <select name='criteria_id' type="select" class="form-control">
+                {% for c in criteria %}
+                    <option value="{{c.id}}">{{c.name}} | {{c.certifications }} | {{c.skills}}</option>
+                {% endfor %}
+            </select><br />
+               {% csrf_token %}
+            <button type="submit" class="btn btn-default btn-md">Filter Applicants</button><br />
+            </form>
+            <br /><br />
+            Candidate criteria score: {{ performance_dic  }}
+            
+            {% for i in performance_dic %}
+                {{  i }}
+            {% endfor %}
+            
+            <br /><br />
+            <table class="table table-striped">
+                <tr>
+                    <th>User ID</td>
+                    <th>Skills</th>
+                    <th>Certifications</th>
+                    <th></th>
+                </tr>
+            {% for cn in candidates %}
+                <tr>
+                    <td>{{ cn.user_id }}</td>
+                    <td>{{ cn.skills }}</td>
+                    <td>{{ cn.certifications }}</td>
+                    <td> <a href="/jobsmatch/applicant/{{ cn.user_id }}">View Profile</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

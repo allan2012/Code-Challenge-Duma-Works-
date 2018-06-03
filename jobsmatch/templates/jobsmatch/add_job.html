@@ -1,0 +1,20 @@
+{% extends "adminbase.html" %} 
+{% load staticfiles %}
+{% block content %}
+<section id="" class="space">
+    <div class="container">
+        <h4>Add Job</h4></h3>
+        <hr />
+        {{ save_job_message }}
+        <div class="row" style="padding-top: 30px;">
+            <form action='' method="post">
+                  <div class="col-sm-8 p-top-40">
+                       {{ form }} <br /><br />
+                      {% csrf_token %}
+                      <input type="submit" class="btn btn-primary btn-md" value="Save Job">
+               </div>
+            </form>       
+        </div>
+    </div>
+</section>
+{% endblock %}
